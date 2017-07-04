@@ -14,10 +14,14 @@ import {
   MdProgressSpinnerModule,
   MdIconModule
 } from '@angular/material';
+import { SearchComponent } from './search/search.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
