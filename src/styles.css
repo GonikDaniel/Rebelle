@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  padding: 2em 23em;
+  background:lightgray;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.md-slider-horizontal {
+  width:100%;
+}
+
+label {
+  font-weight:bold;
+  margin:1.5em 0;
+  display:block;
+}
+
+#page-padding {
+  padding: 0 1.5em 1.5em 1.5em;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.text-muted {
+  color: #777;
+}
