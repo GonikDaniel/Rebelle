@@ -15,6 +15,7 @@ import {
 
 import { SearchComponent } from './search/search.component';
 import { ListComponent } from './list/list.component';
+import { SearchService } from './_services/search.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ListComponent } from './list/list.component';
     MdProgressSpinnerModule,
     MdIconModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
