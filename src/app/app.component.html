@@ -3,4 +3,9 @@
 
   <rebelle-search (onSearch)="search($event)"></rebelle-search>
 
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item }}
+    </li>
+  </ul>
 </div>

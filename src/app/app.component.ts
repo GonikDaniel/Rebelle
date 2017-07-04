@@ -6,6 +6,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 
+import { SearchService } from './_services/search.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -28,6 +30,6 @@ export class AppComponent {
   }
 
   search(searchString: string) {
-    this.searchTermStream.next(search);
+    this.searchTermStream.next(searchString);
   }
 }
