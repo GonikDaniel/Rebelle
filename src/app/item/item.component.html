@@ -1,3 +1,24 @@
-<p>
-  list works!
-</p>
+<md-card>
+
+  <md-card-header>
+    <div md-card-avatar class="material-icons mail-author-avatar">shopping_cart</div>
+    <md-card-title>{{ item.title }}</md-card-title>
+    <md-card-subtitle>{{ item.subtype }}</md-card-subtitle>
+  </md-card-header>
+
+  <md-card-content>
+    <md-card-title>{{ item.type }}</md-card-title>
+    <p>{{ item.description }}</p>
+    <p><b>{{ item.price }}</b></p>
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button (click)="likeItem()">
+      <i class="material-icons">favorite</i> LIKE
+    </button>
+    <button md-button (click)="shareItem()">
+      <i class="material-icons">share</i> SHARE
+    </button>
+  </md-card-actions>
+
+</md-card>

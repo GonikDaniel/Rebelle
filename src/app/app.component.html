@@ -4,6 +4,6 @@
   <rebelle-search (onSearch)="search($event)"></rebelle-search>
 
   <rebelle-item *ngFor="let item of items | async"
-                item="item">
+                [item]="item">
   </rebelle-item>
 </div>

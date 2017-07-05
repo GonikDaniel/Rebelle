@@ -10,6 +10,7 @@ import {
   MdCoreModule,
   MdInputModule,
   MdCardModule,
+  MdButtonModule,
   MdProgressSpinnerModule,
   MdIconModule
 } from '@angular/material';
@@ -32,6 +33,7 @@ import { SearchService } from './_services/search.service';
     MdCoreModule,
     MdInputModule,
     MdCardModule,
+    MdButtonModule,
     MdProgressSpinnerModule,
     MdIconModule
   ],
