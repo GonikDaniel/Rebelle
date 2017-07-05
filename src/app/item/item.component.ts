@@ -14,4 +14,13 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  likeItem() {
+    console.log('not implemented yet');
+  }
+
+  shareItem() {
+    console.log('not implemented yet');
+  }
+
+
 }
