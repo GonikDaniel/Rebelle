@@ -10,6 +10,7 @@ import { config } from '../config/config.development';
 @Injectable()
 export class SearchService {
 
+  private _sub;
   constructor(
     private http: Http,
     // private config: AppConfig
@@ -17,6 +18,7 @@ export class SearchService {
 
   // https://efounbqifq-dsn.algolia.net/1/indexes/Product_v2_en?query=bag
   search(searchString: string) {
+    console.log(this._sub);
     const url = `${config['host']}/1/indexes/Product_v2_en`;
 
     const headers = new Headers();
@@ -28,11 +30,13 @@ export class SearchService {
 
     const options = new RequestOptions({ headers: headers, params: params });
 
-    return this.http
-            .get(url, options)
-            .map(response => response.json())
-            .map(res => res.hits)
-            .catch(this.handleError);
+    this._sub = this.http
+      .get(url, options)
+      .map(response => response.json())
+      .map(res => res.hits)
+      .catch(this.handleError);
+
+    return this._sub;
   }
 
   private handleError(error: Response | any) {
