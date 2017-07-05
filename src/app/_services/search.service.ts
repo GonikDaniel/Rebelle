@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
+import { Http, Headers, RequestOptions, URLSearchParams, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/operator/map';
 
@@ -30,6 +31,12 @@ export class SearchService {
     return this.http
             .get(url, options)
             .map(response => response.json())
-            .map(res => res.hits);
+            .map(res => res.hits)
+            .catch(this.handleError);
+  }
+
+  private handleError(error: Response | any) {
+    console.error(error.message || error);
+    return Observable.throw(error.message || error);
   }
 }
