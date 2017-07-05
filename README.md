@@ -1,6 +1,10 @@
 # Rebelle
 
-Simple Angular 4 + RxJS search example app
+Simple Angular 4 + RxJS search app
+
+## Config settings
+
+Clone config.example.ts into config.development.ts and provide correct keys to be able to make requests to real server
 
 ## Development server
 
