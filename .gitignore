@@ -40,3 +40,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# Config files
+src/app/config/config.production.*
+src/app/config/config.development.*

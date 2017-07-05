@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// import { AppConfig } from './app.config';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -34,7 +35,16 @@ import { SearchService } from './_services/search.service';
     MdProgressSpinnerModule,
     MdIconModule
   ],
-  providers: [SearchService],
+  providers: [
+    // AppConfig,
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: (config: AppConfig) => () => config.load(),
+    //   deps: [AppConfig],
+    //   multi: true
+    // },
+    SearchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
