@@ -29,6 +29,7 @@ export class SearchService {
 
     return this.http
             .get(url, options)
-            .map(response => <string[]> response.json());
+            .map(response => response.json())
+            .map(res => res.hits);
   }
 }

@@ -15,14 +15,14 @@ import {
 } from '@angular/material';
 
 import { SearchComponent } from './search/search.component';
-import { ListComponent } from './list/list.component';
+import { ItemComponent } from './item/item.component';
 import { SearchService } from './_services/search.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ListComponent
+    ItemComponent
   ],
   imports: [
     BrowserModule,
