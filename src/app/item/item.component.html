@@ -9,7 +9,7 @@
   <md-card-content>
     <md-card-title>{{ item.type }}</md-card-title>
     <p>{{ item.description }}</p>
-    <p><b>{{ item.price }}</b></p>
+    <p><b>{{ item.price / 100 | currency:'EUR':true }}</b></p>
   </md-card-content>
 
   <md-card-actions>
